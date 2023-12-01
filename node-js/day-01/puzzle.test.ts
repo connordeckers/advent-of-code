@@ -1,27 +1,28 @@
-import { readFileSync } from "node:fs";
-import { ConvertPuzzleInputToChunks, ElvesSortedByCaloricStorage } from "./lib";
+import { GetTotalSum, GetDigitsOfLine } from "./lib";
 
-const test_input = readFileSync(__dirname + '/test-input.txt', 'utf8');
-
-
-describe("--- Day 1: Calorie Counting ---", () => {
+describe("--- Day 1: Trebuchet?! ---", () => {
   describe("Puzzle 1", () => {
-    const puzzle_input = test_input;
-    const elven_inventory = ConvertPuzzleInputToChunks(puzzle_input);
+    const test_data = ["1abc2", "pqr3stu8vwx", "a1b2c3d4e5f", "treb7uchet"];
+    const digits_in_line = test_data.map(row => GetDigitsOfLine(row, true));
+    const total_sum = GetTotalSum(digits_in_line);
 
-    it("should parse data correctly", () =>
-      expect(elven_inventory).toStrictEqual([
-        [1000, 2000, 3000],
-        [4000],
-        [5000, 6000],
-        [7000, 8000, 9000],
-        [10000],
-      ]));
+    it("should return the sum of 142", () => expect(total_sum).toBe(142));
+  });
 
+  describe("Puzzle 2", () => {
+    const test_data = [
+      "two1nine",
+      "eightwothree",
+      "abcone2threexyz",
+      "xtwone3four",
+      "4nineeightseven2",
+      "zoneight234",
+      "7pqrstsixteen",
+    ];
     
-		const sorted_inventory = ElvesSortedByCaloricStorage(elven_inventory);
-    const topElf = sorted_inventory.at(0);
-
-    it("should return 24000", () => expect(topElf).toBe(24000));
+    const digits_in_line = test_data.map(row => GetDigitsOfLine(row, false));
+    const total_sum = GetTotalSum(digits_in_line);
+    
+		it("should return the sum of 281", () => expect(total_sum).toBe(281));
   });
 });
