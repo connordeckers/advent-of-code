@@ -75,7 +75,7 @@ fn get_number_from_line(line: &str) -> Result<usize, Box<dyn Error>> {
 }
 
 fn main() {
-    let puzzle_input = include_str!("../puzzle-inputs/day-01.txt")
+    let puzzle_input = include_str!("./puzzle-data.txt")
         .trim()
         .split("\n");
 
