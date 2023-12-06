@@ -34,11 +34,13 @@ const start = {
       console.log(chalk.dim("---"));
       console.log();
 
-      child = spawn("node", ["-e", output], {
+      child = spawn("node", ['-e', output], {
         cwd: path.join(import.meta.dirname, path.dirname(entry)),
+				env: { ...process.env, FORCE_COLOR: true }
       });
 
-      child.stdout.on("data", (data) => console.log(data.toString().trim()));
+
+      child.stdout.pipe(process.stdout);
       child.stdout.on("end", () => {
         console.log();
         console.log(chalk.dim("---"));

@@ -41,3 +41,20 @@ yarn jest day-01
 cd day-01;
 esbuild puzzle.ts --bundle --platform=node | node
 ```
+
+## day-02
+
+## day-03
+
+### test
+
+```sh
+yarn jest day-03
+```
+
+### solution
+
+```sh
+cd day-03;
+esbuild puzzle.ts --bundle --platform=node | node
+```

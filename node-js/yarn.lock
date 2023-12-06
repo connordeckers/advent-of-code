@@ -1384,7 +1384,7 @@ __metadata:
     "@types/jest": "npm:^29.5.10"
     "@types/node": "npm:^20.10.1"
     "@types/regenerator-runtime": "npm:^0"
-    chalk: "npm:^5.3.0"
+    chalk: "npm:^4"
     esbuild: "npm:^0.19.8"
     jest: "npm:^29.7.0"
     nodemon: "npm:^3.0.1"
@@ -1715,7 +1715,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:4.1.2, chalk@npm:^4.0.0":
+"chalk@npm:4.1.2, chalk@npm:^4, chalk@npm:^4.0.0":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -1733,13 +1733,6 @@ __metadata:
     escape-string-regexp: "npm:^1.0.5"
     supports-color: "npm:^5.3.0"
   checksum: e6543f02ec877732e3a2d1c3c3323ddb4d39fbab687c23f526e25bd4c6a9bf3b83a696e8c769d078e04e5754921648f7821b2a2acfd16c550435fd630026e073
-  languageName: node
-  linkType: hard
-
-"chalk@npm:^5.3.0":
-  version: 5.3.0
-  resolution: "chalk@npm:5.3.0"
-  checksum: 8297d436b2c0f95801103ff2ef67268d362021b8210daf8ddbe349695333eb3610a71122172ff3b0272f1ef2cf7cc2c41fdaa4715f52e49ffe04c56340feed09
   languageName: node
   linkType: hard
 
